@@ -1,0 +1,53 @@
+<section >
+    <h1 data-aos="fade-up" class="title">Recipe Book</h1>
+
+
+    <p data-aos="fade-up" class="otherTexts mt-4">
+        The E Management is a web application designed for efficient employee data management. Leveraging technologies
+        like
+        Bootstrap for front-end design and MongoDB, Express.js, and Node.js for back-end functionality, this project
+        offers
+        a user-friendly and robust solution.
+    </p>
+
+
+    <section class="mt-4" data-aos="fade-up">
+        <p class="headings">Key Features</p>
+        <p class="my-4" *ngFor="let features of keyFeatures">
+            <span class="headings">{{features.Name}} :-</span>
+            <span class="otherTexts">{{features.featureDescription}}</span>
+        </p>
+    </section>
+
+
+    <section class="mt-4" data-aos="fade-up">
+        <p class="headings">Challenges Faced</p>
+        <p class="otherTexts mt-4">
+            One notable challenge encountered during the development process was implementing the forget password
+            feature,
+            specifically in creating a seamless multi-step process. The challenge was addressed by designing a
+            step-by-step
+            approach using an enum field. Each step, such as email validation, OTP submission, and new password setup,
+            was
+            managed by conditionally rendering views through the ngIF directive. This innovative solution allowed for a
+            structured and user-friendly experience, overcoming the initial hurdles in the process.
+        </p>
+    </section>
+
+
+    <section class="mt-4" data-aos="fade-up">
+        <p class="headings">Technology Used.</p>
+        <ul class="list-disc otherTexts">
+            <li class="my-4 ml-4" *ngFor="let Technologies of technologies">{{Technologies}}</li>
+        </ul>
+    </section>
+
+
+    <section class="mt-4" data-aos="fade-up">
+        <p class="headings">References</p>
+        <ul>
+            <li class="text-blue-700" *ngFor="let References of references"><a target="main"
+                    href="{{References}}">{{References}}</a></li>
+        </ul>
+    </section>
+</section>

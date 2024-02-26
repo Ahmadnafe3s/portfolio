@@ -1,0 +1,20 @@
+.heading {
+    font-size: var(--heading);
+    font-weight: 600;
+    font-family: var(--font);
+}
+
+.icons {
+    font-size: clamp(35px, 3vw, 100px);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.icons:hover {
+    color: rgb(88, 88, 88);
+}
+
+.bg-color {
+    background-color: rgb(241, 250, 254);
+    border-radius: 15px;
+}

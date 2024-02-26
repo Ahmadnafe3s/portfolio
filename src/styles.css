@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    padding: 0px 15px 15px 15px;
+}
+
+:root {
+    --font: "Roboto", sans-serif;
+    --highlight: #0099ff;
+    --heading: clamp(20px, 2vw, 40px)
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0099ff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}

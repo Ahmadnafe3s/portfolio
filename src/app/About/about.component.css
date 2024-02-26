@@ -1,0 +1,16 @@
+.about {
+    font-family: var(--font);
+    font-size: var(--heading);
+    font-weight: 600;
+}
+
+p {
+    font-family: var(--font);
+    font-size: clamp(15px, 2vw, 19px);
+    margin-top: 15px;
+}
+
+
+.highlight {
+    color: var(--highlight);
+}

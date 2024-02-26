@@ -1,0 +1,20 @@
+.title {
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: clamp(19px, 2vw, 22px);
+}
+
+.headings {
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: clamp(17px, 2vw, 19px);
+}
+
+.otherTexts {
+    font-family: var(--font);
+    font-size: clamp(15px, 2vw, 17px);
+}
+
+.highlight {
+    color: var(--highlight);
+}

@@ -1,0 +1,19 @@
+
+
+<header >
+    <div class="logo"><span class="highlight">N</span>afees <span class="highlight">A</span>hmad</div>
+    <nav [ngClass]="{'open' : open}">
+        <div class="logo"><span class="highlight">N</span>afees <span class="highlight">A</span>hmad</div>
+        <ul>
+            <li class="active" (click)="close()"><a class="nav-link" href="#about">About</a></li>
+            <li (click)="close()"><a href="#projects">Projects</a></li>
+            <li (click)="close()"><a href="#contact">Contact</a></li>
+            <li (click)="close()"><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger" (click)="open = !open">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>

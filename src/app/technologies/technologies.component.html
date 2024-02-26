@@ -1,0 +1,12 @@
+<div class="h-screen md:w-8/12 my-10 md:my-20 mx-auto grid place-content-center bg-color">
+
+    <p class="heading text-center" data-aos="fade-up">Technolohies I’ve been working with recently</p>
+
+    <section class="flex flex-wrap justify-between md:w-8/12 mt-10 mx-auto">
+        <div data-aos="fade-up" class="w-4/12 md:w-3/12 text-center mb-10" *ngFor="let icon of iconArrayOfobject">
+            <div class="icons" [innerHTML]="icon.Url"></div>
+            <p style="font-size: clamp(13px, 2vw, 15px);">{{icon.Name}}</p>
+        </div>
+    </section>
+
+</div>

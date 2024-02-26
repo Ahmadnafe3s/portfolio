@@ -1,0 +1,21 @@
+<section class=" mx-auto md:w-8/12">
+    <h1 class="AcedemicProject">Academic Projects</h1>
+    <nav class="mt-10" data-aos="fade-up">
+        <ul class="text-center flex ">
+
+            <li [ngClass]="{onclickActive : currentView === 'e-management'}">
+                <button type="button" (click)="currentView = 'e-management'">E Management</button>
+            </li>
+
+            <li [ngClass]="{onclickActive : currentView === 'recipe-book'}">
+                <button type="button" (click)="currentView = 'recipe-book'">Recipe Book</button>
+            </li>
+
+        </ul>
+    </nav>
+    <section class="mt-10">
+        <app-e-management *ngIf="currentView === 'e-management'"></app-e-management>
+        <app-recipe-book *ngIf="currentView === 'recipe-book'"></app-recipe-book>
+        <!-- <router-outlet></router-outlet> -->
+    </section>
+</section>
