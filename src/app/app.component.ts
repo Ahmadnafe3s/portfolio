@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
     AOS.init({
       once: true,
       duration: 1000,
-      offset: 200,
+      offset: 150,
       delay: 100
     });
   }

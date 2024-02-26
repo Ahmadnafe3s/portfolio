@@ -4,22 +4,21 @@ import { Directive, HostBinding, HostListener, Input, OnInit } from "@angular/co
     selector: '[blockscroll]'
 })
 
-export class BlockScrollDirective implements OnInit {
-    @Input() blockscroll: boolean = false;
+export class BlockScrollDirective {
 
-    ngOnInit(): void {
-        // window.addEventListener('scroll', this.handleScroll())
+    blockscroll = false;
 
-    }
+    @HostListener('click') scroll() {
 
-    @HostListener('window:scroll', ['$event'])
+        this.blockscroll = !this.blockscroll
 
-    onScroll(event: Event) {
         if (this.blockscroll) {
-            event.preventDefault();
-            // event.stopPropagation();
-
-            event.stopImmediatePropagation()
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'auto'
         }
+
+        console.log('Scroll Blocked...');
+
     }
 }

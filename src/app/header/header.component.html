@@ -1,6 +1,5 @@
 
-
-<header >
+<header>
     <div class="logo"><span class="highlight">N</span>afees <span class="highlight">A</span>hmad</div>
     <nav [ngClass]="{'open' : open}">
         <div class="logo"><span class="highlight">N</span>afees <span class="highlight">A</span>hmad</div>
@@ -11,7 +10,7 @@
             <li (click)="close()"><a href="#resume">Resume</a></li>
         </ul>
     </nav>
-    <div class="hamburger" (click)="open = !open">
+    <div class="hamburger" (click)="open = !open" blockscroll>
         <div></div>
         <div></div>
         <div></div>
