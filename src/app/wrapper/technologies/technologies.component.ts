@@ -15,9 +15,9 @@ export class TechnologiesComponent {
     { Url: "<i class='bx bxl-git'></i>", Name: "Git" },
     { Url: "<i class='bx bxl-javascript' ></i>", Name: "JavaScript" },
     { Url: "<i class='bx bxl-typescript' ></i>", Name: "TypeScript" },
+    { Url: "<i class='bx bxl-mongodb' ></i>", Name: "mongoDB" },
+    { Url: "ex", Name: "Express Js" },
     { Url: "<i class='bx bxl-angular'></i>", Name: "Angular" },
     { Url: "<i class='bx bxl-nodejs' ></i>", Name: "Node Js" },
-    // { Url: "assets/logo/ex.png", Name: "Express Js" },
-    { Url: "<i class='bx bxl-mongodb' ></i>", Name: "mongoDB" },
-]
+  ]
 }

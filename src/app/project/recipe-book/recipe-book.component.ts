@@ -10,15 +10,19 @@ export class RecipeBookComponent {
   keyFeatures = [
     { Name: "User Authentication", featureDescription: "Users can sign up and log in, with different access levels based on user type (new or existing user)." },
 
-    { Name: "Password Recovery", featureDescription: "The system provides a forget password option, allowing users to reset their passwords through a multi-step process. This includes email validation, OTP submission, and setting a new password." },
+    { Name: "Recipe Management", featureDescription: "Users can add, read, update, and delete recipes with ingredients they can store data like recipe name , description and details. One-click transfer of recipe ingredients to the shopping list section." },
 
-    { Name: "Employee Data Management", featureDescription: "Users can store comprehensive employee data in the database, including name, email, password and more info." },
+    { Name: "Shopping List", featureDescription: "Users can view ingredients that is transferred from recipe book and also they can create , Read , update and delete ingredients independly. All the data of shopping list is managed in localStorage" },
+    { Name: "Lazy Loading", featureDescription: "Application supports Lazy loading" },
 
-    { Name: "CRUD Operations", featureDescription: "The system supports Create, Read, Update, and Delete operations, offering flexibility in managing employee information." }
-]
+    { Name: "CRUD Operations", featureDescription: "The system supports Create, Read, Update, and Delete operations, offering flexibility in managing recipes list and shopping list." }
+  ]
 
-technologies = ["Bootstrap", "MongoDB", "Express.js", "Node.js"]
+  technologies = ["Bootstrap", "Angular", "Firebase"]
 
-references = ["https://github.com/Ahmadnafe3s/Angular-Crud-Application?tab=readme-ov-file"]
+  references = [
+    "https://github.com/Ahmadnafe3s/Recipe-Book-",
+    "https://recipe-book-431a4.web.app"
+  ]
 
 }

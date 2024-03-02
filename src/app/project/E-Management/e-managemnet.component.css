@@ -2,6 +2,9 @@
     font-family: var(--font);
     font-weight: 600;
     font-size: clamp(19px, 2vw, 22px);
+    text-align: center;
+    background: #e7f2ff;
+    padding: 8px 0;
 }
 
 .headings {
@@ -16,5 +19,11 @@
 }
 
 .highlight {
-    color: var(--highlight);
+    color: var(--highlight) !important;
+}
+
+
+#references {
+    font-size: clamp(10px, 2vw, 18px);
+    border-radius: 15px;
 }

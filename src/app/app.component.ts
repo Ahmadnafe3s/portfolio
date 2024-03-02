@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import AOS from "aos"
 @Component({
   selector: 'app-root',
@@ -6,12 +6,11 @@ import AOS from "aos"
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'portfolio';
   ngOnInit(): void {
     AOS.init({
       once: true,
       duration: 1000,
-      offset: 150,
+      offset: 200,
       delay: 100
     });
   }

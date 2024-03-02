@@ -3,14 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    padding: 0px 15px 15px 15px;
-}
+/* for logo  */
+/* @import url('https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@600&family=Lilita+One&family=Pacifico&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+/* main heading */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@600&family=Lilita+One&display=swap');
+
+/* Heading Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
 
 :root {
-    --font: "Roboto", sans-serif;
+    --font: "Fira Sans", sans-serif;
     --highlight: #0099ff;
-    --heading: clamp(20px, 2vw, 40px)
+    --heading: clamp(20px, 2vw, 40px);
+    --font-weight: 700;
+    --main-heading-font: "Acme", sans-serif;
+
 }
 
 html,

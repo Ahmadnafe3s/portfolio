@@ -1,21 +1,23 @@
-<section class=" mx-auto md:w-8/12">
-    <h1 class="AcedemicProject">Academic Projects</h1>
-    <nav class="mt-10" data-aos="fade-up">
-        <ul class="text-center flex ">
+<section class=" mx-auto md:w-8/12 md:pt-52 md:mt-10 pt-36">
 
-            <li [ngClass]="{onclickActive : currentView === 'e-management'}">
-                <button type="button" (click)="currentView = 'e-management'">E Management</button>
-            </li>
+  <h1 class="AcedemicProject text-center">Academic Projects</h1>
+  <div class="flex flex-wrap justify-center mt-8">
 
-            <li [ngClass]="{onclickActive : currentView === 'recipe-book'}">
-                <button type="button" (click)="currentView = 'recipe-book'">Recipe Book</button>
-            </li>
+    <div class="card md:mx-10 mx-5  my-6" data-aos="fade-up">
+      <div class="card-details">
+        <p class="text-title"><span class="highlight">E</span> Management</p>
+        <p class="text-body">A web application design for managing employee data.</p>
+      </div>
+      <button class="card-button" routerLink="e-management" (click)="onNavigate()">More info</button>
+    </div>
 
-        </ul>
-    </nav>
-    <section class="mt-10">
-        <app-e-management *ngIf="currentView === 'e-management'"></app-e-management>
-        <app-recipe-book *ngIf="currentView === 'recipe-book'"></app-recipe-book>
-        <!-- <router-outlet></router-outlet> -->
-    </section>
+    <div class="card md:mx-10 mx-5 my-6" data-aos="fade-up">
+      <div class="card-details">
+        <p class="text-title"><span class="highlight">H</span>ome Needs</p>
+        <p class="text-body">A web application design for managing Recipes .</p>
+      </div>
+      <button class="card-button" routerLink="home-needs" (click)="onNavigate()">More info</button>
+    </div>
+
+  </div>
 </section>
