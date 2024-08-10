@@ -108,7 +108,7 @@
     font-size: clamp(15px, 2vw, 20px);
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
-    max-width: fit-content;
+    max-width:max-content;
 }
 
 .description {
@@ -118,7 +118,7 @@
 
 
 .typing-demo {
-    width: 22ch;
+    width: 23ch;
     -webkit-animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;

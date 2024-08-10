@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { projectService } from "../project.service";
+import { ActivatedRoute, Params } from "@angular/router";
 
 
 @Component({
@@ -12,10 +13,11 @@ import { projectService } from "../project.service";
 export class eManagementComponent implements OnInit {
 
     constructor(private projecService: projectService) {
+        projecService.navLinkeVisible.next(false)
     }
 
 
-    
+
     ngOnInit(): void { }
 
     keyFeatures = [

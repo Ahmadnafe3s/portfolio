@@ -7,12 +7,12 @@
         <div class="logo" (click)="onHomeClick()">< <span class="highlight">N</span>afees <span class="highlight">A</span>hmad
         /></div>
         <ul>
-            <li (click)="close()" *ngIf="!Visible"><a class="nav-link" (click)="onHomeClick()">Home</a>
+            <li  *ngIf="!Visible"><a (click)="close()" class="nav-link" (click)="onHomeClick()">Home</a>
             </li>
-            <li (click)="close()" *ngIf="Visible"><a class="nav-link" href="#about">About</a></li>
-            <li (click)="close()" *ngIf="Visible"><a href="#projects">Projects</a></li>
-            <li (click)="close()" *ngIf="Visible"><a href="#contact">Contact</a></li>
-            <li (click)="close()" *ngIf="Visible"><a href="#resume">Resume</a></li>
+            <li  *ngIf="Visible"><a (click)="close()" class="nav-link" href="#about">About</a></li>
+            <li  *ngIf="Visible"><a (click)="close()" href="#projects">Projects</a></li>
+            <li  *ngIf="Visible"><a (click)="close()" href="#contact">Contact</a></li>
+            <li  *ngIf="Visible"><a (click)="close()" href="#resume">Resume</a></li>
         </ul>
 
     </nav>

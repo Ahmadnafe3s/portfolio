@@ -12,7 +12,7 @@ export class AppHeader implements OnInit {
 
     open = false;
 
-    Visible;;
+    Visible :boolean;
 
     constructor(private renderer: Renderer2, private projectService: projectService , private router : Router) { }
 
@@ -24,6 +24,7 @@ export class AppHeader implements OnInit {
 
     onHomeClick() {
         this.projectService.navLinkeVisible.next(true)
+        this.close()
         this.router.navigate(["/"])
     }
 

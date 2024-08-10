@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { projectService } from '../project.service';
 
 @Component({
   selector: 'app-recipe-book',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class RecipeBookComponent {
 
+  constructor(private projectService: projectService){
+    this.projectService.navLinkeVisible.next(false)
+  }
+
+  
   keyFeatures = [
     { Name: "User Authentication", featureDescription: "Users can sign up and log in, with different access levels based on user type (new or existing user)." },
 
