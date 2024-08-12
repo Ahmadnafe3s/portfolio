@@ -1,11 +1,12 @@
-<div class=" md:w-7/12 my-10 mx-auto md:py-28 py-16 md:mt-14 mt-10 grid place-content-center bg-color">
+<div class=" md:w-7/12 mx-auto  text-black mt-16 py-5 md:mt-0 grid place-content-center gap-10 flex-col bg-color" style="min-height: 90vh;">
+    
+    <p class="heading text-center w-full list_reveal">Technolohies I’ve been working with recently</p>
+    
 
-    <p class="heading text-center" data-aos="fade-up">Technolohies I’ve been working with recently</p>
-
-    <section class="flex flex-wrap justify-between md:w-8/12 mt-10 mx-auto">
-        <div data-aos="fade-up" class="w-4/12 md:w-3/12 text-center mb-10" *ngFor="let icon of iconArrayOfobject">
+    <section class="flex flex-wrap justify-center md:gap-6 md:w-7/12 gap-4 mx-auto w-full list_reveal">
+        <div class=" text-center h-24 w-24" *ngFor="let icon of iconArrayOfobject">
             <div class="icons" [innerHTML]="icon.Url"></div>
-            <p style="font-size: clamp(13px, 2vw, 15px);">{{icon.Name}}</p>
+            <p style="font-size: clamp(13px, 2vw, 15px);" class="font-bold">{{icon.Name}}</p>
         </div>
     </section>
 

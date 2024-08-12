@@ -9,12 +9,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@600&family=Lilita+One&display=swap');
 
 /* Heading Font */
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
+
 
 :root {
     --font: "Fira Sans", sans-serif;
-    --highlight: #0099ff;
+    --highlight: #b4df06;
     --heading: clamp(20px, 2vw, 40px);
     --font-weight: 700;
     --main-heading-font: "Acme", sans-serif;
@@ -24,17 +24,103 @@
 html,
 body {
     scroll-behavior: smooth;
+    background-color: #0f1200;
+    color: white;
 }
+
 
 ::-webkit-scrollbar {
     width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0099ff;
+    background-color: var(--highlight);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f4f4f4;
+    background-color: #0f1200;
+}
+
+
+.responsive-svg {
+    width: clamp(50px, 5vw, 60px);
+    height: clamp(50px, 5vw, 60px);
+  }
+
+
+/* Button */
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 10px 18px;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    /* background: #9700f5; */
+    background: radial-gradient(circle, rgba(255, 0, 250, 1) 0%, rgba(255, 0, 0, 1) 100%);
+    color: black;
+    width: 45px;
+    height: 45px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+
+.cta svg {
+    display: inline;
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #ffffff;
+    stroke-width: 2;
+    -webkit-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    transform: translateX(-5px);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    /* background: #9700f5; */
+    background: radial-gradient(circle, rgba(255, 0, 250, 1) 0%, rgba(255, 0, 0, 1) 100%);
+}
+
+.cta:hover svg {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.cta:active {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
 }

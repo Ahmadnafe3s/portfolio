@@ -1,0 +1,59 @@
+<section class="md:w-10/12 mx-auto md:my-16 my-10 bg-color  md:p-10 p-4">
+
+    <h1 class="title"><span class="highlight">H</span>ome <span class="highlight">N</span>eeds</h1>
+
+    <hr style="border: 1px solid #b4df06;">
+
+    <p class="otherTexts mt-10">
+        The HomeNeeds is a web application design for Recipe Management and Shopping List. Leveraging technologies
+        like
+        Bootstrap and Angular for <span class="highlight">front-end</span> design and Firebase for <span class="highlight">back-end</span> functionality, this project divided into
+        two section recipe book all and shopping list that
+        offers
+        a user-friendly and robust solution.
+    </p>
+
+
+    <section class="mt-4">
+        <p class="headings">Key Features</p>
+        <p class="my-4" *ngFor="let features of keyFeatures">
+            <span class="inline_headings">{{features.Name}} :- </span>
+            <span class="otherTexts">{{features.featureDescription}}</span>
+        </p>
+    </section>
+
+
+    <section class="mt-4">
+        <p class="headings">Challenges Faced</p>
+        <p class="otherTexts mt-4">
+            I had a couple of issues that I encountered recently. First, I needed to return the emitted data of an
+            observable in the canActivate guard in order to dynamically prevent unauthorized or unauthenticated users
+            from accessing certain routes. However, I found that in Angular, I couldn't return data inside the subscribe
+            method. After some research, I discovered that I could use exhaust map to return the data instead of using
+            subscribe, which solved the problem.
+        </p>
+
+        <p class="otherTexts mt-4">
+            Another issue I faced was displaying the logo in the login or logout form section. Despite trying various
+            solutions, I couldn't get the logo.png file to be recognized inside the auth component, regardless of where
+            I kept it. Eventually, I found a solution on Stack Overflow - I needed to keep the logo.png file in the
+            assets folder. Once I did that, the image was successfully displayed.
+        </p>
+    </section>
+
+
+    <section class="mt-4">
+        <p class="headings">Technology Used.</p>
+        <ul class="list-disc otherTexts">
+            <li class="my-4 ml-4" *ngFor="let Technologies of technologies">{{Technologies}}</li>
+        </ul>
+    </section>
+
+    <section class="mt-4">
+        <p class="headings">References</p>
+        <ul>
+            <li class="text-blue-700" *ngFor="let References of references"><a target="main"
+                    href="{{References}}">{{References}}</a></li>
+        </ul>
+    </section>
+</section>

@@ -7,12 +7,15 @@ import { AboutComponent } from './wrapper/About/about.component';
 import { ProjectComponent } from './project/project.component';
 import { eManagementComponent } from './project/E-Management/e-managemnet.component';
 import { ContacMeComponent } from './wrapper/contac-me/contac-me.component';
-import { RecipeBookComponent } from './project/recipe-book/recipe-book.component';
+import { HomeNeedsComponent } from './project/homeneeds/homeneeds.component';
 import { TechnologiesComponent } from './wrapper/technologies/technologies.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
 import { routerModule} from './router.module';
+import { NgOptimizedImage } from '@angular/common';
+import { NextjsHomeNeedsComponent } from './project/nextjs-homeneeds/nextjs-homeneeds.component';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     AppHeader,
@@ -21,15 +24,20 @@ import { routerModule} from './router.module';
     ProjectComponent,
     eManagementComponent,
     ContacMeComponent,
-    RecipeBookComponent,
+    HomeNeedsComponent,
     TechnologiesComponent,
-    WrapperComponent
+    WrapperComponent,
+    NextjsHomeNeedsComponent
   ],
+
   imports: [
     BrowserModule,
-    routerModule
+    routerModule,
+    NgOptimizedImage
   ],
+
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

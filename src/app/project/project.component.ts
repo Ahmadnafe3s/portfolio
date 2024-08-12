@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { projectService } from "./project.service";
+import { ScrollRevealService } from "../scroll-reveal.service";
 
 @Component({
     selector: 'app-project',
@@ -9,10 +10,14 @@ import { projectService } from "./project.service";
 })
 
 
-export class ProjectComponent {
+export class ProjectComponent implements OnInit{
     currentView = 'e-management'
 
-    constructor(private projectService: projectService) { }
+    constructor(private projectService: projectService , private scrollReveal : ScrollRevealService) { }
+
+    ngOnInit(): void {
+        this.scrollReveal.list_reveal('.list_reveal')
+    }
 
     onNavigate() {
         this.projectService.navLinkeVisible.next(false)

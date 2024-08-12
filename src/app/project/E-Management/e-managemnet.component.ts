@@ -12,7 +12,7 @@ import { ActivatedRoute, Params } from "@angular/router";
 
 export class eManagementComponent implements OnInit {
 
-    constructor(private projecService: projectService) {
+    constructor(private projecService: projectService ) {
         projecService.navLinkeVisible.next(false)
     }
 
