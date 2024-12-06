@@ -1,4 +1,10 @@
+<!-- Header -->
 <app-header></app-header>
-<main class="px-3">
-    <router-outlet></router-outlet>
+
+<!-- Main Content with footer -->
+<main class="flex flex-col min-h-[calc(100vh-56px-1px)]">
+    <div class="flex-1">  
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
 </main>

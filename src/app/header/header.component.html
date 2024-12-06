@@ -1,27 +1,50 @@
-<header>
+<div class="bg-white/75 backdrop-blur-lg sticky top-0 left-0 inset-x-0 transition-all w-full z-[100]">
+    <MaxWidthWrapper>
+        <header class="h-14 w-full flex justify-between items-center border-0 border-zinc-200 border-b">
 
-    <div class="logo" (click)="onHomeClick()">< <span class="highlight">N</span>afees <span class="highlight">A</span>hmad /></div>
+            <div (click)="onHomeClick()" class="font-logoFont cursor-pointer text-xl z-[110] font-semibold tracking-wide">
+                < <span class="text-green-500">N</span>afees <span class="text-green-500">A</span>hmad />
+            </div>
 
-    <nav [ngClass]="{'open' : open}">
+            <nav [ngClass]="{'left-0' : open , '-left-full' : !open}"
+                class="w-2/3 shadow-rightShadow bg-white fixed top-0 h-screen transition-all sm:static sm:bg-transparent sm:shadow-none sm:w-auto pl-2.5 sm:pl-0 sm:h-auto">
 
-        <div class="logo" (click)="onHomeClick()">< <span class="highlight">N</span>afees <span class="highlight">A</span>hmad
-        /></div>
-        <ul>
-            <li  *ngIf="!Visible"><a (click)="close()" class="nav-link" (click)="onHomeClick()">Home</a>
-            </li>
-            <li  *ngIf="Visible"><a (click)="close()" class="nav-link" href="#about">About</a></li>
-            <li  *ngIf="Visible"><a (click)="close()" href="#projects">Projects</a></li>
-            <li  *ngIf="Visible"><a (click)="close()" href="#contact">Contact</a></li>
-            <li  *ngIf="Visible"><a (click)="close()" href="#resume">Resume</a></li>
-        </ul>
+                <ul class="flex flex-col mt-16 sm:mt-0 sm:flex-row sm:gap-1 gap-y-2 ">
+                    <li *ngIf="!Visible">
+                        <a class=" rounded-md py-[5px]  text-white  text-sm px-3.5 active:scale-95 transition-all bg-green-500 inline-block"
+                            (click)="close()" (click)="onHomeClick()">Home</a>
+                    </li>
+                    <li *ngIf="Visible">
+                        <a (click)="close()"
+                            class=" rounded-md py-[5px] text-sm px-3.5 active:scale-95 transition-all inline-block"
+                            href="#about">About</a>
+                    </li>
+                    <li *ngIf="Visible">
+                        <a (click)="close()"
+                            class=" rounded-md py-[5px] text-sm px-3.5 active:scale-95 transition-all inline-block"
+                            href="#projects">Projects</a>
+                    </li>
+                    <li *ngIf="Visible">
+                        <a (click)="close()"
+                            class=" rounded-md py-[5px] text-sm px-3.5 active:scale-95 transition-all inline-block"
+                            href="#contact">Contact</a>
+                    </li>
+                    <li *ngIf="Visible">
+                        <a class="bg-green-500 rounded-md text-sm py-[5px] px-3.5 active:scale-95 text-white transition-all inline-block"
+                            (click)="close()" href="#resume">Resume</a>
+                    </li>
+                </ul>
 
-    </nav>
+            </nav>
 
-    <!-- In the toggle function when condition gets true screen scroll will be blocked and for false unblocked -->
-    <div class="hamburger" (click)="toggleOpenNav()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+            <!-- In the toggle function when condition gets true screen scroll will be blocked and for false unblocked -->
+            <div class="block sm:hidden py-1 active:scale-95 px-2 bg-green-500 hover:bg-green-600 transition-all rounded-md"
+                (click)="toggleOpenNav()">
+                <div class="w-7 h-0.5 bg-white my-1.5"></div>
+                <div class="w-7 h-0.5 bg-white my-1.5"></div>
+                <div class="w-7 h-0.5 bg-white my-1.5"></div>
+            </div>
 
-</header>
+        </header>
+    </MaxWidthWrapper>
+</div>

@@ -1,31 +1,31 @@
-<section class=" mx-auto md:w-8/12 md:pt-52 md:mt-10 pt-36">
+<MaxWidthWrapper className="pt-36 md:pt-40 lg:48 pb-20 md:mb-28 lg:pb-32">
+  <h1
+    class="mb-10 font-heading list_reveal text-2xl font-semibold after:inline-block after:w-1/3 after:h-px after:bg-green-500 after:ml-2">
+    Academic Projects</h1>
 
-  <h1 class="AcedemicProject text-center">Academic Projects</h1>
+  <div class="grid lg:grid-cols-3 md:grid-cols-2 pt-16 lg:pt-20 md:px-16 lg:px-32 gap-y-10 lg:gap-0">
 
-  <div class="flex flex-wrap justify-center mt-8">
-
-
-    <div class="card md:mx-10 mx-5  my-6 list_reveal">
+    <div class="card mx-auto list_reveal">
       <div class="card-details">
-        <p class="text-title"><span class="highlight">E</span> Management</p>
+        <p class="font-semibold "><span class="text-green-500 text-nowrap">E</span> Management</p>
         <p class="text-body">A web application design for managing employee data.</p>
       </div>
       <button class="card-button" routerLink="e-management" (click)="onNavigate()">More info</button>
     </div>
 
 
-    <div class="card md:mx-10 mx-5 my-6 list_reveal">
+    <div class="card mx-auto list_reveal">
       <div class="card-details">
-        <p class="text-title"><span class="highlight">Angular</span> Home Needs</p>
-        <p class="text-body">A web application design for managing Recipes  & shopping List.</p>
+        <p class="font-semibold "><span class="text-green-500 text-nowrap">Angular</span> Home Needs</p>
+        <p class="text-body">A web application design for managing Recipes & shopping List.</p>
       </div>
       <button class="card-button" routerLink="homeneeds" (click)="onNavigate()">More info</button>
     </div>
 
 
-    <div class="card md:mx-10 mx-5 my-6 list_reveal">
+    <div class="card mx-auto list_reveal">
       <div class="card-details">
-        <p class="text-title"><span class="highlight">nextJS</span> Home Needs</p>
+        <p class="font-semibold "><span class="text-green-500 text-nowrap">nextJS</span> Home Needs</p>
         <p class="text-body">A web application design for Posting and Managing Recipes & Shopping List.</p>
       </div>
       <button class="card-button" routerLink="nextjs-homeneeds" (click)="onNavigate()">More info</button>
@@ -34,4 +34,4 @@
 
   </div>
 
-</section>
+</MaxWidthWrapper>

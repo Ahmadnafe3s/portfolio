@@ -1,85 +1,90 @@
-<section class="md:w-10/12 mx-auto md:my-16 my-10 bg-color  md:p-10 p-4">
+<MaxWidthWrapper className="pt-20 md:pt-28 pb-24 lg:pb-32">
 
-    <h1 class="title">Next<span class="highlight">JS H</span>ome <span class="highlight">N</span>eeds</h1>
+    <h1 class="text-4xl md:text-6xl font-bold font-heading leading-tight text-center">Next<span
+            class="text-green-500 font-semibold">JS</span> Home Needs
+    </h1>
 
-    <hr style="border: 1px solid #b4df06;">
+    <div class="w-full h-px bg-green-500 mt-3"></div>
 
-    <p class="otherTexts mt-10">
-        The Nextjs HomeNeeds is a web application which is the advance version of my homeneeds project which i had
-        created through angular . The NextJS_HomeNeeds project i have created for Posting Recipes and Managing Shopping
-        List where users can see Posted Recipes and also can <span class="highlight">post</span> their own recipes to
-        world and can perform CRUD operations over their own posts. Leveraging technologies
-        like
-        Bootstrap for Styling and NextJs for both <span class="highlight">front-end</span> design and <span
-            class="highlight">back-end</span> functionality and for Storing data i have used MongoDB Atlas <span
-            class="highlight">Database</span>, this project divided into
-        several sections like <span class="highlight">Authentication</span> , <span class="highlight">Recipes</span> ,
-        <span class="highlight">Shopping List</span> , <span class="highlight">Profile</span> .
+    <p class="mt-10">
+        Nextjs_HomeNeeds is a web application that is the advanced version of my HomeNeeds project, which I originally
+        created using Angular. The Next.js HomeNeeds project is designed for posting recipes and managing shopping
+        lists, allowing users to view posted recipes, post their own recipes to the world, and perform CRUD operations
+        on their own posts. Leveraging technologies like Bootstrap for styling and Next.js for both <span
+            class="text-green-500 font-semibold">front-end</span> design and <span
+            class="text-green-500 font-semibold">back-end</span> functionality, and
+        using MongoDB Atlas for data storage, this project is divided into several sections, including <span
+            class="text-green-500 font-semibold">Authentication</span>, <span
+            class="text-green-500 font-semibold">Recipes</span>, <span class="text-green-500 font-semibold">Shopping
+            List</span>, and <span class="text-green-500 font-semibold">Profile</span>.
     </p>
 
 
+
     <section class="mt-4">
-        <p class="headings">Key Features</p>
+        <p class="font-heading font-semibold text-2xl">Key Features</p>
         <p class="my-4" *ngFor="let features of keyFeatures">
-            <span class="inline_headings">{{features.Name}} :- </span>
-            <span class="otherTexts">{{features.featureDescription}}</span>
+            <span class="font-semibold">{{features.Name}} :- </span>
+            <span>{{features.featureDescription}}</span>
         </p>
     </section>
 
 
     <section class="mt-4">
-        <p class="headings">Challenges Faced</p>
-        <p class="otherTexts mt-4">
-            I had a couple of issues that I encountered recently. First, I wanted to get searchParamsData (query params)
-            into the route (back-end) which i passed with the API i tried lot. but i couldn't get searchParamsData then
-            i searched a lot about
-            getting serachparamsData onto google , stackoveflow , and several other places but i couldn't get Data. then
-            after finding solution over chatgpt i got the solution
-            that how i can get the searchParamsData into the back-end .
-            I had to simply extract serachParams from new URL(req.url) object;
-        </p>
+        <p class="font-heading font-semibold text-2xl">Challenges Faced</p>
 
-        <p class="otherTexts mt-4">
-            Second issue I faced while during the passing user data into the navbar from the logIn component these
-            component was quite far from each others. so it was required lots of props drilling which can cause
-            application performance issue . I overcome from this through Redux toolkit.
-        </p>
+        <ul class="list-disc mt-5">
+            <li>
+                I recently encountered a couple of issues. First, I wanted to retrieve <code>searchParamsData</code>
+                (query params) in the route (back-end) that I passed with the API. I tried various methods but couldn't
+                get the <code>searchParamsData</code>. I searched extensively on Google, Stack Overflow, and several
+                other places, but I couldn't find a solution. Finally, after consulting ChatGPT, I found the solution: I
+                needed to simply extract the <code>searchParams</code> from the <code>new URL(req.url)</code> object.
+            </li>
 
-        <p class="otherTexts mt-4">
-            Third issue I faced after passing the data into navbar whenever i refreshed the page that data into the
-            redux toolkit gets wiped . To overcome this problem i stored the that into the localstorage by dispatching
-            data from the logIn component.
-        </p>
+            <li class="mt-5">
+                The second issue I faced was passing user data into the navbar from the login component. These
+                components were quite far from each other, so it required a lot of props drilling, which could cause
+                performance issues in the application. I overcame this by using Redux Toolkit.
+            </li>
 
-        <p class="otherTexts mt-4">
-            Forth issue I faced after Storing data into the localstorage whenever user hits the logout button user gets
-            immedietly logged out from the application behind the scene application removes the localStorage data and
-            token.
-            if user didn't click the logout out button the user was automatically logged out from the application after
-            24h beacuse of Token expiration and The token is automatically gets removed from the cookies after
-            expiration But the problem is here the data into localStorage is still remain despited after logout.
-            To overcome this problem i used cookie to store user data instead of localStorage to persist RTK store data
-            and i setted cookie expiration time as same as token expiration for automatically deleting user data after
-            token expiration.
-        </p>
+            <li class="mt-5">
+                The third issue I faced was that after passing the data into the navbar, the data in Redux Toolkit would
+                get wiped whenever I refreshed the page. To overcome this problem, I stored the data in
+                <code>localStorage</code> by dispatching it from the login component.
+            </li>
 
-
+            <li class="mt-5">
+                The fourth issue I faced was that after storing data in <code>localStorage</code>, whenever the user
+                clicked the logout button, they were immediately logged out from the application. Behind the scenes, the
+                application removed the <code>localStorage</code> data and token. However, if the user didn't click the
+                logout button, they were automatically logged out after 24 hours due to token expiration, as the token
+                is automatically removed from the cookies after expiration. The problem was that the data in
+                <code>localStorage</code> still remained even after logout.
+                To overcome this problem, I used cookies to store user data instead of <code>localStorage</code> to
+                persist RTK store data. I set the cookie expiration time to be the same as the token expiration,
+                ensuring that user data is automatically deleted after the token expires.
+            </li>
+        </ul>
     </section>
 
 
+
+
     <section class="mt-4">
-        <p class="headings">Technology Used.</p>
-        <ul class="list-disc otherTexts">
+        <p class="font-heading font-semibold text-2xl">Technology Used.</p>
+        <ul class="list-disc">
             <li class="my-4 ml-4" *ngFor="let Technologies of technologies">{{Technologies}}</li>
         </ul>
     </section>
 
 
     <section class="mt-4">
-        <p class="headings">References</p>
+        <p class="font-heading font-semibold text-2xl">References</p>
         <ul>
-            <li class="text-blue-700" *ngFor="let References of references"><a target="main"
+            <li class="text-blue-500 hover:text-blue-700" *ngFor="let References of references"><a target="main"
                     href="{{References}}">{{References}}</a></li>
         </ul>
     </section>
-</section>
+
+</MaxWidthWrapper>

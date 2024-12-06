@@ -26,5 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## NOTE 
-The `Wrapper component` contains all other components such as about info etc. every components selector is placed in Wrapper components template to handle the view between projects and homepage. 
+## Removed All the Components with in Wrapper
+
+I have removed for better view and responsiveness all seprate componentes from wrapper

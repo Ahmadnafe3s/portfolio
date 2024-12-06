@@ -6,15 +6,10 @@ import { ActivatedRoute, Params } from "@angular/router";
 @Component({
     selector: 'app-e-management',
     templateUrl: 'e-managemnet.component.html',
-    styleUrls: ['e-managemnet.component.css']
 })
 
 
 export class eManagementComponent implements OnInit {
-
-    constructor(private projecService: projectService ) {
-        projecService.navLinkeVisible.next(false)
-    }
 
 
 

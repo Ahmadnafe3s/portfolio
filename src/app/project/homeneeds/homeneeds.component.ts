@@ -3,8 +3,7 @@ import { projectService } from '../project.service';
 
 @Component({
   selector: 'app-recipe-book',
-  templateUrl: './homeneeds.component.html',
-  styleUrls: ['./homeneeds.component.css']
+  templateUrl: './homeneeds.component.html'
 })
 export class HomeNeedsComponent {
 
